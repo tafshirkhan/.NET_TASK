@@ -1,0 +1,44 @@
+﻿@model List<NewsTask.Models.Database.Book>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <a href="/News/Create" class="btn btn-success">Add New</a>
+    <br /> <br />
+           <form action="/News/Index" method="get">
+               <p>
+                   <input type="search" placeholder="Enter something" name="searching" />
+                   <input type="submit" value="Search"  class="btn btn-primary"/>
+                   
+               </p>
+               
+           </form>
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <td><b>ID</b></td>
+            <td><b>Title</b></td>
+            <td><b>Description</b></td>
+            <td><b>Category</b></td>
+            <td><b>PublishDate</b></td>
+            <td><b>Action</b></td>
+        </tr>
+
+        @foreach (var b in Model)
+        {
+            <tr>
+                <td>@b.Id</td>
+                <td>@b.Title</td>
+                <td>@b.Description</td>
+                <td>@b.Categorry</td>
+                <td>@b.PublishDate</td>
+                <td><a href="/News/Edit/@b.Id" class="btn btn-success">Edit</a> || <a href="/News/Delete/@b.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>
+

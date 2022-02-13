@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<div class="container">
+    <a href="/News/Index" class="btn btn-success">News List</a>
+    <br /><br />
+    <form action="/News/Create" method="post">
+        <input type="text" name="Title" placeholder="Title" class="form-control">
+        <input type="text" name="Description" placeholder="Description" class="form-control">
+        <input type="text" name="Categorry" placeholder="Category" class="form-control">
+        <input type="datetime" name="PublishDate" placeholder="PublishDate" class="form-control">
+        <br />
+        <input type="submit" value="Add" />
+
+    </form>
+</div>
+

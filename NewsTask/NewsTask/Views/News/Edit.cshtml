@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<div class="container">
+    <div>
+        <a href="/News/Index" class="btn btn-success">News List</a>
+
+    </div>
+    <br /><br />
+    <form action="/News/Edit" method="post">
+        <input type="hidden" name="Id" value="@Model.Id" class="form-control">
+        <input type="text" name="Title" value="@Model.Title" class="form-control">
+        <input type="text" name="Description" value="@Model.Description" class="form-control">
+        <input type="text" name="Categorry" value="@Model.Categorry" class="form-control">
+        <input type="datetime" name="PublishDate" value="@Model.PublishDate" class="form-control">
+        <br />
+        <input type="submit" value="Update" />
+
+    </form>
+</div>
