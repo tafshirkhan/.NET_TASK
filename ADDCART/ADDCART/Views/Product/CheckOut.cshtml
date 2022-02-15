@@ -1,0 +1,39 @@
+﻿@using ADDCART.Models.Database;
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+<h2>CheckOut</h2>
+
+@if (Session["cart"] == null)
+{
+    <div class="alert alert-danger">
+        <strong>No product added to cart!</strong>
+    </div>
+
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in (List<Product>)Session["cart"])
+            {
+            <tr>
+                <td>@d.Name</td>
+                <td>@d.Quantity</td>
+                <td>@d.Price</td>
+
+            </tr>
+            }
+
+        </tbody>
+    </table>
+    <a class="btn btn-success" href="">Checkout</a>
+}

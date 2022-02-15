@@ -1,9 +1,29 @@
-﻿@model List<ADDCART.Models.Database.Product>
+﻿@using ADDCART.Models.Database;
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+
+<div>
+    <h2>INDEX</h2>
+    <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cart<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                @if (Session["cart"] != null)
+                {
+                    foreach (var Product in (List<Product>)Session["cart"])
+                    {
+                        <li>@Product.Name</li>
+
+                    }
+                }
+            <li> <a href="/Product/CheckOut" class="btn btn-danger">CheckOut</a> </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 <div class="container">
     <table class="table table-bordered">
         <tr>
@@ -26,7 +46,8 @@
                     @using (Html.BeginForm("AddCart", "Product", new { @productId = b.productId }, FormMethod.Post))
                     {
                         
-                        <a href="/@b.productId" class="btn btn-danger">Add to Cart</a>
+                        @*<a href="/Product/Index/@b.productId" class="btn btn-danger">Add to Cart</a>*@
+                        <button type="submit" class="btn btn-danger">Add to Cart</button>
                     }
                 </td>
             </tr>

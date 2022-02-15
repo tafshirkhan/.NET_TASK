@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace ADDCART.Controllers
 {
@@ -21,11 +22,71 @@ namespace ADDCART.Controllers
         public ActionResult AddCart(int productId)
         {
             DemoDBEntities db = new DemoDBEntities();
-            var cart = new List<Product>();
-            var product = db.Products.Find(productId);
-            cart.Add(product);
-            Session["cart"] = cart;
-            return View();
+            if(Session["cart"] == null)
+            {
+                List<Product> cart = new List<Product>();
+                var product = db.Products.Find(productId);
+
+                cart.Add(new Product()
+                {
+                    Name = product.Name,
+                    Quantity = 1
+                });
+                Session["cart"] = cart;
+            }
+            else
+            {
+                List<Product> cart = (List<Product>)Session["cart"];
+                var product = db.Products.Find(productId);
+                cart.Add(new Product()
+                {
+                    Name = product.Name,
+                    Quantity = 1
+                });
+
+                //foreach(var pro in cart)
+                //{
+
+                //    if (pro.productId == productId)
+                //    {
+                //        int old = (int)product.Quantity;
+
+                //        cart.Remove(pro);
+
+                //        cart.Add(new Product()
+                //        { 
+
+                //            Name = product.Name,
+                //            Quantity = old + 1
+                //        });
+                //        break;
+
+                //    }
+                //    else
+                //    {
+                //        cart.Add(new Product()
+                //        {
+                //            Name = product.Name,
+                //            Quantity = 1
+                //        });
+                //    }
+                //}
+
+                Session["cart"] = cart;
+
+            }
+
+            return Redirect("Index");
         }
+
+        public ActionResult CheckOut()
+        {
+            DemoDBEntities db = new DemoDBEntities();
+            var products = (from n in db.Products select n);
+           
+
+            return View(d);
+        }
+
     }
 }
