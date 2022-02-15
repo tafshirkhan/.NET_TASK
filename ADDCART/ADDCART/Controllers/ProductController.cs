@@ -30,7 +30,8 @@ namespace ADDCART.Controllers
                 cart.Add(new Product()
                 {
                     Name = product.Name,
-                    Quantity = 1
+                    Quantity = product.Quantity,
+                    Price = product.Price
                 });
                 Session["cart"] = cart;
             }
@@ -41,7 +42,8 @@ namespace ADDCART.Controllers
                 cart.Add(new Product()
                 {
                     Name = product.Name,
-                    Quantity = 1
+                    Quantity = product.Quantity,
+                    Price = product.Price
                 });
 
                 //foreach(var pro in cart)
@@ -79,13 +81,14 @@ namespace ADDCART.Controllers
             return Redirect("Index");
         }
 
+       
         public ActionResult CheckOut()
         {
-            DemoDBEntities db = new DemoDBEntities();
-            var products = (from n in db.Products select n);
-           
 
-            return View(d);
+           
+            DemoDBEntities db = new DemoDBEntities();
+            return View();
+
         }
 
     }
