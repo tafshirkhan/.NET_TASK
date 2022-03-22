@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Dept">
+    <Key>
+      <PropertyRef Name="deptId" />
+    </Key>
+    <Property Name="deptId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deptName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Students" Relationship="DemoDBModel.FK_Students_Depts" FromRole="Dept" ToRole="Student" />
+  </EntityType>
+  <EntityContainer Name="DemoDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Depts" EntityType="Self.Dept" />
+    <EntitySet Name="Students" EntityType="DemoDBModel.Student" />
+    <AssociationSet Name="FK_Students_Depts" Association="DemoDBModel.FK_Students_Depts">
+      <End Role="Dept" EntitySet="Depts" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="studentId" />
+    </Key>
+    <Property Name="studentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Dept" Relationship="DemoDBModel.FK_Students_Depts" FromRole="Student" ToRole="Dept" />
+  </EntityType>
+  <Association Name="FK_Students_Depts">
+    <End Type="DemoDBModel.Dept" Role="Dept" Multiplicity="1" />
+    <End Type="DemoDBModel.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dept">
+        <PropertyRef Name="deptId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

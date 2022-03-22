@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Depts">
+    <Key>
+      <PropertyRef Name="deptId" />
+    </Key>
+    <Property Name="deptId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="deptName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="studentId" />
+    </Key>
+    <Property Name="studentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOB" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Students_Depts">
+    <End Role="Depts" Type="Self.Depts" Multiplicity="1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Depts">
+        <PropertyRef Name="deptId" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="DId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DemoDBModelStoreContainer">
+    <EntitySet Name="Depts" EntityType="Self.Depts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Students_Depts" Association="Self.FK_Students_Depts">
+      <End Role="Depts" EntitySet="Depts" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -7,22 +7,23 @@
 <div>
     <h2>INDEX</h2>
     <ul class="nav navbar-nav navbar-right">
-        
-        <li class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cart<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                @if (Session["cart"] != null)
-                {
-                    foreach (var Product in (List<Product>)Session["cart"])
-                    {
-                        <li>@Product.Name</li>
 
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Cart<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    @if (Session["cart"] != null)
+                    {
+                        foreach (var Product in (List<Product>)Session["cart"])
+                        {
+                            <li>@Product.Name</li>
+
+                        }
                     }
-                }
-            <li> <a href="/Product/CheckOut" class="btn btn-danger">CheckOut</a> </li>
-            </ul>
-        </li>
-    </ul>
+                <li> <a href="/Product/CheckOut" class="btn btn-danger">CheckOut</a> </li>
+                </ul>
+            </li>
+        </ul>
+   
 </div>
 <div class="container">
     <table class="table table-bordered">

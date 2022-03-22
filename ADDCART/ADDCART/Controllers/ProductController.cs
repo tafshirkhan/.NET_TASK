@@ -19,69 +19,95 @@ namespace ADDCART.Controllers
             return View(data);
         }
 
+        //public ActionResult AddCart(int productId)
+        //{
+        //    DemoDBEntities db = new DemoDBEntities();
+        //    if(Session["cart"] == null)
+        //    {
+        //        List<Product> cart = new List<Product>();
+        //        var product = db.Products.Find(productId);
+
+        //        cart.Add(new Product()
+        //        {
+        //            Name = product.Name,
+        //            Quantity = product.Quantity,
+        //            Price = product.Price
+        //        });
+        //        Session["cart"] = cart;
+        //    }
+        //    else
+        //    {
+        //        List<Product> cart = (List<Product>)Session["cart"];
+        //        var product = db.Products.Find(productId);
+        //        cart.Add(new Product()
+        //        {
+        //            Name = product.Name,
+        //            Quantity = product.Quantity,
+        //            Price = product.Price
+        //        });
+
+        //        //foreach(var pro in cart)
+        //        //{
+
+        //        //    if (pro.productId == productId)
+        //        //    {
+        //        //        int old = (int)product.Quantity;
+
+        //        //        cart.Remove(pro);
+
+        //        //        cart.Add(new Product()
+        //        //        { 
+
+        //        //            Name = product.Name,
+        //        //            Quantity = old + 1
+        //        //        });
+        //        //        break;
+
+        //        //    }
+        //        //    else
+        //        //    {
+        //        //        cart.Add(new Product()
+        //        //        {
+        //        //            Name = product.Name,
+        //        //            Quantity = 1
+        //        //        });
+        //        //    }
+        //        //}
+
+        //        Session["cart"] = cart;
+
+        //    }
+
+        //    return Redirect("Index");
+        //}
+
+
         public ActionResult AddCart(int productId)
         {
             DemoDBEntities db = new DemoDBEntities();
-            if(Session["cart"] == null)
+            Product pro = (from p in db.Products
+                           where p.productId.Equals(productId)
+                           select p).FirstOrDefault();
+            if (Session["cart"] == null)
             {
                 List<Product> cart = new List<Product>();
-                var product = db.Products.Find(productId);
+                cart.Add(pro);
 
-                cart.Add(new Product()
-                {
-                    Name = product.Name,
-                    Quantity = product.Quantity,
-                    Price = product.Price
-                });
-                Session["cart"] = cart;
+                string json = new JavaScriptSerializer().Serialize(cart);
+                Session["cart"] = json.ToString();
             }
             else
             {
                 List<Product> cart = (List<Product>)Session["cart"];
-                var product = db.Products.Find(productId);
-                cart.Add(new Product()
-                {
-                    Name = product.Name,
-                    Quantity = product.Quantity,
-                    Price = product.Price
-                });
+                cart.Add(pro);
 
-                //foreach(var pro in cart)
-                //{
-
-                //    if (pro.productId == productId)
-                //    {
-                //        int old = (int)product.Quantity;
-
-                //        cart.Remove(pro);
-
-                //        cart.Add(new Product()
-                //        { 
-
-                //            Name = product.Name,
-                //            Quantity = old + 1
-                //        });
-                //        break;
-
-                //    }
-                //    else
-                //    {
-                //        cart.Add(new Product()
-                //        {
-                //            Name = product.Name,
-                //            Quantity = 1
-                //        });
-                //    }
-                //}
-
-                Session["cart"] = cart;
-
+                string json = new JavaScriptSerializer().Serialize(cart);
+                Session["cart"] = json.ToString();
             }
-
             return Redirect("Index");
         }
 
-       
+
         public ActionResult CheckOut()
         {
 
