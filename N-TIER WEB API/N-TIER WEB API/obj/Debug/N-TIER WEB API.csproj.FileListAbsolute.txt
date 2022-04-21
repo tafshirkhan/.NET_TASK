@@ -1,0 +1,57 @@
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\N-TIER WEB API.dll.config
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\N-TIER WEB API.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\N-TIER WEB API.pdb
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\csc.exe
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\csc.exe.config
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\csc.rsp
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\csi.exe
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\csi.rsp
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\System.AppContext.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\vbc.exe
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\vbc.exe.config
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\vbc.rsp
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\VBCSCompiler.exe
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\BEL.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\BLL.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\Newtonsoft.Json.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\System.Net.Http.Formatting.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\System.Web.Http.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\System.Web.Http.WebHost.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\BEL.pdb
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\BLL.pdb
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\Newtonsoft.Json.xml
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\System.Net.Http.Formatting.xml
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\System.Web.Http.xml
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\System.Web.Http.WebHost.xml
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\obj\Debug\N-TIER WEB API.csproj.AssemblyReference.cache
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\obj\Debug\N-TIER WEB API.csproj.CoreCompileInputs.cache
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\obj\Debug\N-TIER WEB API.csproj.CopyComplete
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\obj\Debug\N-TIER WEB API.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\obj\Debug\N-TIER WEB API.pdb
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\DAL.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\EntityFramework.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\DAL.pdb
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\DAL.dll.config
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\EntityFramework.xml
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\EntityFramework.SqlServer.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\EntityFramework.SqlServer.xml
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\AutoMapper.dll
+C:\Users\Tafsir\Desktop\.NET\N-TIER WEB API\N-TIER WEB API\bin\AutoMapper.xml
